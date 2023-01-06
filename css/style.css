@@ -576,7 +576,7 @@ button {
 .works {
   padding-top: 146px;
   padding-bottom: 146px;
-  background-color: rgba(28, 137, 121, 0.54);
+  background: url("../img/works/secondBg.svg") 0 0 repeat;
 }
 .works__title:not(:last-child) {
   margin-bottom: 20px;
