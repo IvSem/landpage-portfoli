@@ -1,0 +1,147 @@
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	border-bottom: 1px solid rgba(238, 238, 238, 0.1);
+	background-color: var(--bg-color);
+	z-index: 50;
+	// .header__container
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 15px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	// .header__logo
+	&__logo {
+		position: relative;
+		z-index: 2;
+	}
+
+	// .header__menu
+	&__menu {
+	}
+}
+
+.menu {
+	flex: 0 0 auto;
+	// .menu__body
+	&__body {
+		overflow: auto;
+
+		@media (max-width: $mobile) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background-image: radial-gradient(circle at center, #899dc4, #495d84);
+			background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+			right: -100%;
+			top: 0;
+			padding: 100px 15px 30px 15px;
+			transition: right 0.3s ease-in-out;
+
+			&::before {
+				content: '';
+				position: fixed;
+				top: 0;
+				right: -100%;
+				width: 100%;
+				height: 85.99px;
+				background: linear-gradient(
+					0deg,
+					rgba(66, 17, 80, 1) 2%,
+					rgba(66, 17, 80, 0.8915413821778712) 14%,
+					rgba(66, 17, 80, 1) 60%,
+					rgba(66, 17, 80, 1) 100%,
+					rgba(108, 28, 108, 0.8971436230742297) 100%
+				);
+				transition: right 0.3s ease-in-out;
+			}
+		}
+	}
+
+	// .menu__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 5px 40px;
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			font-size: 30px;
+			gap: 45px;
+			padding-top: 30px;
+		}
+	}
+
+	// .menu__item
+	&__item {
+	}
+
+	// .menu__link
+	&__link {
+		line-height: 1.5; /* 27/18 */
+		transition: color 0.3s ease-in-out;
+		&:hover {
+			color: var(--accent-color);
+		}
+	}
+
+	// .menu__icon
+	&__icon {
+	}
+
+	&__open .menu__body,
+	&__open .menu__body::before {
+		right: 0;
+	}
+
+	&__open .icon-menu span {
+		width: 0;
+	}
+	&__open .icon-menu::before {
+		top: calc(50% - 1px);
+		transform: rotate(-45deg);
+	}
+	&__open .icon-menu::after {
+		bottom: calc(50% - 1px);
+		transform: rotate(45deg);
+	}
+}
+
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		flex: 0 0 30px;
+		height: 18px;
+		position: relative;
+		z-index: 5;
+
+		& span,
+		&::before,
+		&::after {
+			content: '';
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: greenyellow;
+			transition: 0.2s ease-in-out;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		& span {
+			top: calc(50% - 1px);
+		}
+	}
+}
