@@ -19,18 +19,22 @@
 						<nav class="menu__body">
 							<ul class="menu__list">
 								<li class="menu__item">
-									<a href="./index.html" class="menu__link">Home</a>
+									<a class="menu__link" data-goto=".main" href="./index.html"
+										>Home</a
+									>
 								</li>
 								<li class="menu__item">
-									<a href="#" class="menu__link">About Me</a>
+									<a class="menu__link" data-goto=".about" href="#">About Me</a>
 								</li>
 								<li class="menu__item">
-									<a href="#" class="menu__link">Contact</a>
+									<a class="menu__link" data-goto=".contacts" href="#"
+										>Contact</a
+									>
 								</li>
 							</ul>
 						</nav>
 					</div>
-					<button type="button" class="menu__icon icon-menu">
+					<button class="menu__icon icon-menu" type="button">
 						<span></span>
 					</button>
 				</div>
@@ -73,23 +77,161 @@
 						</div>
 					</div>
 				</section>
+
+				<!--? =====Works -section===== -->
+				<section class="page__works works">
+					<div class="works__container">
+						<div class="works__content">
+							<h2 class="works__title title">My recent <span>works</span></h2>
+						</div>
+						<div class="works__items items-works">
+							<nav class="items-works__navigation">
+								<button class="items-works__type button button_dark active">
+									All
+								</button>
+								<button
+									class="items-works__type button button_dark"
+									data-work-type="ui"
+								>
+									ui
+								</button>
+								<button
+									class="items-works__type button button_dark"
+									data-work-type="ux"
+								>
+									UX
+								</button>
+								<button
+									class="items-works__type button button_dark"
+									data-work-type="wd"
+								>
+									Web Design
+								</button>
+							</nav>
+							<div class="items-works__body">
+								<a class="items-works__item" href="#" data-work-type="ui">
+									<div class="items-works__image">
+										<img src="./img/works/items/01.png" alt="works1" />
+									</div>
+								</a>
+								<a class="items-works__item" href="#" data-work-type="ux">
+									<div class="items-works__image">
+										<img src="./img/works/items/02.png" alt="works1" />
+									</div>
+								</a>
+								<a class="items-works__item" href="#" data-work-type="ux">
+									<div class="items-works__image">
+										<img src="./img/works/items/02.png" alt="works1" />
+									</div>
+								</a>
+								<a class="items-works__item" href="#" data-work-type="ux">
+									<div class="items-works__image">
+										<img src="./img/works/items/02.png" alt="works1" />
+									</div>
+								</a>
+								<a class="items-works__item" href="#" data-work-type="wd">
+									<div class="items-works__image">
+										<img src="./img/works/items/03.png" alt="works1" />
+									</div>
+								</a>
+								<a class="items-works__item" href="#" data-work-type="wd">
+									<div class="items-works__image">
+										<img src="./img/works/items/03.png" alt="works1" />
+									</div>
+								</a>
+								<a class="items-works__item" href="#" data-work-type="wd">
+									<div class="items-works__image">
+										<img src="./img/works/items/03.png" alt="works1" />
+									</div>
+								</a>
+								<a class="items-works__item" href="#" data-work-type="wd">
+									<div class="items-works__image">
+										<img src="./img/works/items/03.png" alt="works1" />
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!--? =====clients - section===== -->
+				<section class="page__contacts contacts">
+					<div class="contacts__container">
+						<div class="contacts__content">
+							<h2 class="contacts__title title">
+								Got a project in <span>mind?</span>
+							</h2>
+							<div class="contacts__image">
+								<img src="./img/contacts/image.svg" alt="contacts" />
+							</div>
+						</div>
+						<form class="contacts__form form" action="#">
+							<div class="form__item">
+								<label class="form__label" for="i-1">Your name</label>
+								<input
+									class="form__input"
+									required
+									id="i-1"
+									placeholder="Name"
+									type="text"
+									name="name"
+								/>
+							</div>
+							<div class="form__item">
+								<label class="form__label" for="i-2">Your email</label>
+								<input
+									class="form__input"
+									required
+									id="i-2"
+									placeholder="Email"
+									type="email"
+									name="email"
+								/>
+							</div>
+							<div class="form__item">
+								<label class="form__label" for="i-3">Your Message</label>
+
+								<textarea
+									name="message"
+									id="i-3"
+									placeholder="Message"
+									class="form__input"
+								></textarea>
+							</div>
+							<div class="form__item">
+								<button type="submit" class="form__button button">
+									<span>Send Message</span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</section>
 			</main>
 			<footer class="footer">
 				<div class="footer__container">
 					<nav class="footer__menu menu-footer">
 						<ul class="menu-footer__list">
 							<li class="menu-footer__item">
-								<a href="" class="menu-footer__link menu-footer__link_home"
+								<a
+									class="menu-footer__link menu-footer__link_home"
+									data-goto=".main"
+									href="./index.html"
 									>Home</a
 								>
 							</li>
 							<li class="menu-footer__item">
-								<a href="" class="menu-footer__link menu-footer__link_about"
+								<a
+									class="menu-footer__link menu-footer__link_about"
+									href="#"
+									data-goto=".about"
 									>About me</a
 								>
 							</li>
 							<li class="menu-footer__item">
-								<a href="" class="menu-footer__link menu-footer__link_contact"
+								<a
+									class="menu-footer__link menu-footer__link_contact"
+									href="#"
+									data-goto=".contacts"
 									>Contact</a
 								>
 							</li>

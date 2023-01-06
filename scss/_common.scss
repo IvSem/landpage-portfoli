@@ -34,7 +34,7 @@
 	padding: 10px 32px;
 	background-color: var(--blue-color);
 	border-radius: 24px;
-
+	text-transform: uppercase;
 	transition: all 0.3s ease-in-out;
 	cursor: pointer;
 	&:hover {
@@ -43,8 +43,9 @@
 	&_dark {
 		background-color: var(--bgSecond-color);
 		backdrop-filter: blur(2px);
-		&:hover {
-			background-color: rgba(116, 121, 130, 0.5);
+		&:hover,
+		&.active {
+			background-color: var(--blue-color);
 		}
 	}
 }
